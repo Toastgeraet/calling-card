@@ -59,7 +59,7 @@ das Zertifikat ausgestellt hat, lädt die Seite nicht.
 ## Offene Punkte / Platzhalter
 
 - [ ] Impressum und Datenschutzerklärung vervollständigen (Anschrift, Kontakt)
-- [ ] Platzhalter-Adresse `kontakt@example.com` ersetzen (Kontakt-Button in `index.html`, Impressum, Datenschutz)
+- [ ] Postfach für `kontakt@tobiasbergmann.dev` einrichten (z. B. mailbox.org; MX-, SPF- und DKIM-Einträge bei INWX) – bis dahin kommen Mails nicht an
 - [ ] XING-Link im Kontaktbereich eintragen
 - [ ] Verfügbarkeitsstatus in der Visitenkarte pflegen
 - [ ] Weitere Referenzprojekte, Screenshots und Live-Demos ergänzen
