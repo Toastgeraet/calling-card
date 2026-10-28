@@ -85,7 +85,7 @@
       });
     }, { rootMargin: '0px 0px -10% 0px' });
 
-    document.querySelectorAll('.section-header, .skill-card, .service, .project, .timeline-item, .values li')
+    document.querySelectorAll('.section-header, .skill-card, .service, .project, .step, .calc, .timeline-item, .values li')
       .forEach(function (el) {
         el.classList.add('reveal');
         revealObserver.observe(el);
@@ -93,25 +93,40 @@
   }
 
   /* ------------------------------------------------------------------
-     Projektfilter
+     Zeitfresser-Rechner (läuft nur lokal im Browser)
      ------------------------------------------------------------------ */
-  var filterButtons = document.querySelectorAll('.filter-btn');
-  var projects = document.querySelectorAll('.project');
+  var calcForm = document.getElementById('calc-form');
 
-  filterButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var filter = btn.getAttribute('data-filter');
-      filterButtons.forEach(function (b) {
-        var active = b === btn;
-        b.classList.toggle('is-active', active);
-        b.setAttribute('aria-pressed', String(active));
-      });
-      projects.forEach(function (p) {
-        var tags = (p.getAttribute('data-tags') || '').split(/\s+/);
-        p.hidden = filter !== 'all' && tags.indexOf(filter) === -1;
-      });
-    });
-  });
+  if (calcForm) {
+    var HOURS_PER_DAY = 8;
+    var num = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 0 });
+    var eur = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+
+    function value(name) {
+      var v = parseFloat(calcForm.elements[name].value.replace(',', '.'));
+      return isFinite(v) && v > 0 ? v : 0;
+    }
+    function setText(id, text) {
+      document.getElementById(id).textContent = text;
+    }
+
+    function updateCalc() {
+      var share = value('share') / 100;
+      var hours = value('minutes') / 60 * value('count') * value('period') * value('people');
+      var cost = hours * value('rate');
+
+      setText('calc-share-out', Math.round(share * 100) + '\u00a0%');
+      setText('calc-hours', num.format(hours));
+      setText('calc-days', num.format(hours / HOURS_PER_DAY));
+      setText('calc-cost', eur.format(cost));
+      setText('calc-saved-hours', num.format(hours * share));
+      setText('calc-saved-cost', eur.format(cost * share));
+    }
+
+    calcForm.addEventListener('input', updateCalc);
+    calcForm.addEventListener('submit', function (e) { e.preventDefault(); });
+    updateCalc();
+  }
 
   /* ------------------------------------------------------------------
      Platzhalter-Links nicht anspringen lassen
