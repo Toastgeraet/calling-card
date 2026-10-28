@@ -58,8 +58,7 @@ das Zertifikat ausgestellt hat, lädt die Seite nicht.
 
 ## Offene Punkte / Platzhalter
 
-- [ ] Impressum und Datenschutzerklärung vervollständigen (Anschrift, Kontakt)
-- [ ] Postfach für `kontakt@tobiasbergmann.dev` einrichten (z. B. mailbox.org; MX-, SPF- und DKIM-Einträge bei INWX) – bis dahin kommen Mails nicht an
+- [ ] Postfach für `kontakt@tobiasbergmann.dev` einrichten (z. B. mailbox.org; MX-, SPF- und DKIM-Einträge bei INWX) – bis dahin kommen Mails nicht an; danach den Anbieter in `datenschutz.html` ergänzen (TODO-Kommentar)
 - [ ] XING-Link im Kontaktbereich eintragen
 - [ ] Verfügbarkeitsstatus in der Visitenkarte pflegen
 - [ ] Weitere Referenzprojekte, Screenshots und Live-Demos ergänzen
@@ -68,5 +67,7 @@ das Zertifikat ausgestellt hat, lädt die Seite nicht.
 
 ## Grundsatz
 
-Keine privaten Daten (Wohnanschrift, private E-Mail, Telefonnummer, Geburtsdatum) im Repository
-oder auf der Website ablegen – auch nicht in Kommentaren. Das Repo ist öffentlich einsehbar.
+Keine privaten Daten (private E-Mail, Geburtsdatum o. Ä.) im Repository oder auf der Website ablegen –
+auch nicht in Kommentaren. Das Repo ist öffentlich einsehbar. Einzige Ausnahme sind die gesetzlich
+vorgeschriebenen Angaben (Anschrift, Telefon) in `impressum.html` und `datenschutz.html`; beide
+Seiten sind per `noindex` von Suchmaschinen ausgeschlossen.

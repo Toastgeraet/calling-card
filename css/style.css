@@ -776,22 +776,6 @@ ul { padding-left: 1.2em; }
 .legal .container { max-width: 760px; }
 .legal h2 { font-size: 1.35rem; margin-top: 2em; }
 .legal p, .legal li { color: var(--text-muted); }
-.placeholder {
-  display: inline-block;
-  padding: 0 0.4em;
-  border-radius: 4px;
-  background: #fef3c7;
-  color: #78350f;
-  font-family: var(--font-mono);
-  font-size: 0.9em;
-}
-.notice {
-  padding: 14px 18px;
-  border: 1px solid #f59e0b;
-  border-radius: var(--radius-sm);
-  background: rgb(245 158 11 / 0.08);
-  margin-bottom: 32px;
-}
 .back-link { display: inline-block; margin-bottom: 24px; }
 
 /* ==========================================================================
