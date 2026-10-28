@@ -13,7 +13,7 @@
   <meta property="og:description" content="Weniger Sisyphusarbeit. Mehr Zeit für das, was zählt. KI-gestützte Automatisierungen, die produktiv laufen.">
   <meta name="theme-color" content="#0f172a">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20261028-2">
   <script>
     // Theme früh setzen, um Aufblitzen zu vermeiden
     try {
@@ -21,7 +21,7 @@
       if (t) document.documentElement.setAttribute('data-theme', t);
     } catch (e) {}
   </script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=20261028-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -179,38 +179,49 @@
           <form class="calc-form" id="calc-form" novalidate>
             <div class="field">
               <label for="calc-minutes">Wie lange dauert sie einmal?</label>
-              <div class="input-unit">
-                <input id="calc-minutes" name="minutes" type="number" inputmode="decimal" min="0" step="1" value="15">
-                <span>Minuten</span>
-              </div>
-            </div>
-            <div class="field">
-              <label for="calc-count">Wie oft fällt sie an?</label>
-              <div class="input-unit">
-                <input id="calc-count" name="count" type="number" inputmode="decimal" min="0" step="1" value="10">
-                <select id="calc-period" name="period" aria-label="Zeitraum">
-                  <option value="220">pro Tag</option>
-                  <option value="46" selected>pro Woche</option>
-                  <option value="12">pro Monat</option>
-                </select>
+              <div class="stepper">
+                <button type="button" class="stepper-btn" data-dir="-1" aria-label="Dauer verringern"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"/></svg></button>
+                <input id="calc-minutes" name="minutes" type="number" inputmode="decimal" min="1" step="5" value="15">
+                <span class="stepper-unit" aria-hidden="true">Min.</span>
+                <button type="button" class="stepper-btn" data-dir="1" aria-label="Dauer erhöhen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg></button>
               </div>
             </div>
             <div class="field">
               <label for="calc-people">Wie viele Personen machen das?</label>
-              <div class="input-unit">
+              <div class="stepper">
+                <button type="button" class="stepper-btn" data-dir="-1" aria-label="Personen verringern"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"/></svg></button>
                 <input id="calc-people" name="people" type="number" inputmode="numeric" min="1" step="1" value="1">
-                <span>Personen</span>
+                <span class="stepper-unit" aria-hidden="true">Pers.</span>
+                <button type="button" class="stepper-btn" data-dir="1" aria-label="Personen erhöhen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg></button>
+              </div>
+            </div>
+            <div class="field field-wide">
+              <label for="calc-count">Wie oft fällt sie an?</label>
+              <div class="field-row">
+                <div class="stepper">
+                <button type="button" class="stepper-btn" data-dir="-1" aria-label="Häufigkeit verringern"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"/></svg></button>
+                <input id="calc-count" name="count" type="number" inputmode="numeric" min="1" step="1" value="10">
+                <span class="stepper-unit" aria-hidden="true">mal</span>
+                <button type="button" class="stepper-btn" data-dir="1" aria-label="Häufigkeit erhöhen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg></button>
+              </div>
+                <div class="segmented" role="radiogroup" aria-label="Zeitraum">
+                  <label><input type="radio" name="period" value="220"><span>pro Tag</span></label>
+                  <label><input type="radio" name="period" value="46" checked><span>pro Woche</span></label>
+                  <label><input type="radio" name="period" value="12"><span>pro Monat</span></label>
+                </div>
               </div>
             </div>
             <div class="field">
               <label for="calc-rate">Was kostet eine Arbeitsstunde?</label>
-              <div class="input-unit">
+              <div class="stepper">
+                <button type="button" class="stepper-btn" data-dir="-1" aria-label="Stundensatz verringern"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"/></svg></button>
                 <input id="calc-rate" name="rate" type="number" inputmode="decimal" min="0" step="5" value="50">
-                <span>€ / Stunde</span>
+                <span class="stepper-unit" aria-hidden="true">€/Std.</span>
+                <button type="button" class="stepper-btn" data-dir="1" aria-label="Stundensatz erhöhen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg></button>
               </div>
             </div>
-            <div class="field field-wide">
-              <label for="calc-share">Wie viel davon ließe sich automatisieren? <output id="calc-share-out" for="calc-share">70&nbsp;%</output></label>
+            <div class="field">
+              <label for="calc-share">Davon automatisierbar <output id="calc-share-out" for="calc-share">70&nbsp;%</output></label>
               <input id="calc-share" name="share" type="range" min="10" max="100" step="5" value="70">
             </div>
           </form>

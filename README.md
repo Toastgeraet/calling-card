@@ -56,6 +56,12 @@ Außerdem die Domain unter **GitHub → Settings (Account) → Pages → Verifie
 **Settings → Pages** *Enforce HTTPS* aktivieren. `.dev` ist nur per HTTPS erreichbar – bis GitHub
 das Zertifikat ausgestellt hat, lädt die Seite nicht.
 
+### Cache
+
+GitHub Pages lässt Dateien etwa 10 Minuten im Browser zwischenspeichern. CSS und JS werden deshalb
+mit einer Versionsnummer eingebunden (`css/style.css?v=…`, `js/main.js?v=…`). Bei Änderungen an
+diesen Dateien die Nummer in allen HTML-Seiten erhöhen, damit Besucher sofort die neue Version laden.
+
 ## Grundsatz
 
 Keine privaten Daten (private E-Mail, Geburtsdatum o. Ä.) im Repository oder auf der Website ablegen –

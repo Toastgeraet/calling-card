@@ -99,31 +99,72 @@
 
   if (calcForm) {
     var HOURS_PER_DAY = 8;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var num = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 0 });
     var eur = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+    var shareInput = calcForm.elements.share;
+    var outputs = [
+      { el: document.getElementById('calc-hours'), format: num },
+      { el: document.getElementById('calc-days'), format: num },
+      { el: document.getElementById('calc-cost'), format: eur },
+      { el: document.getElementById('calc-saved-hours'), format: num },
+      { el: document.getElementById('calc-saved-cost'), format: eur }
+    ];
 
     function value(name) {
-      var v = parseFloat(calcForm.elements[name].value.replace(',', '.'));
+      var v = parseFloat(String(calcForm.elements[name].value).replace(',', '.'));
       return isFinite(v) && v > 0 ? v : 0;
     }
-    function setText(id, text) {
-      document.getElementById(id).textContent = text;
+
+    // Zahl kurz zum neuen Wert hochzählen lassen
+    function animateTo(out, target) {
+      var from = out.current || 0;
+      var start = null;
+      cancelAnimationFrame(out.frame);
+      if (reduceMotion || from === target) {
+        out.current = target;
+        out.el.textContent = out.format.format(target);
+        return;
+      }
+      function tick(now) {
+        if (start === null) start = now;
+        var p = Math.min(1, (now - start) / 350);
+        out.current = from + (target - from) * (1 - Math.pow(1 - p, 3));
+        out.el.textContent = out.format.format(out.current);
+        if (p < 1) out.frame = requestAnimationFrame(tick);
+      }
+      out.frame = requestAnimationFrame(tick);
     }
 
     function updateCalc() {
       var share = value('share') / 100;
       var hours = value('minutes') / 60 * value('count') * value('period') * value('people');
       var cost = hours * value('rate');
+      var min = Number(shareInput.min), max = Number(shareInput.max);
 
-      setText('calc-share-out', Math.round(share * 100) + '\u00a0%');
-      setText('calc-hours', num.format(hours));
-      setText('calc-days', num.format(hours / HOURS_PER_DAY));
-      setText('calc-cost', eur.format(cost));
-      setText('calc-saved-hours', num.format(hours * share));
-      setText('calc-saved-cost', eur.format(cost * share));
+      shareInput.style.setProperty('--fill', ((share * 100 - min) / (max - min) * 100) + '%');
+      document.getElementById('calc-share-out').textContent = Math.round(share * 100) + ' %';
+
+      [hours, hours / HOURS_PER_DAY, cost, hours * share, cost * share].forEach(function (v, i) {
+        animateTo(outputs[i], v);
+      });
     }
 
+    // −/+ Buttons neben den Zahlenfeldern
+    calcForm.addEventListener('click', function (e) {
+      var btn = e.target.closest('.stepper-btn');
+      if (!btn) return;
+      var input = btn.parentNode.querySelector('input');
+      var step = Number(input.step) || 1;
+      var min = input.min === '' ? 0 : Number(input.min);
+      var current = parseFloat(String(input.value).replace(',', '.')) || 0;
+      var next = Math.max(min, Math.round((current + step * Number(btn.getAttribute('data-dir'))) / step) * step);
+      input.value = next;
+      updateCalc();
+    });
+
     calcForm.addEventListener('input', updateCalc);
+    calcForm.addEventListener('change', updateCalc);
     calcForm.addEventListener('submit', function (e) { e.preventDefault(); });
     updateCalc();
   }
