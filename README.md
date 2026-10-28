@@ -12,12 +12,12 @@ für Referenzprojekte. Zielgruppe: Freelance-Anfragen und Recruiting.
 ```
 .
 ├── index.html          # Startseite (Hero/Visitenkarte, Profil, Kompetenzen, Leistungen, Projekte, Werdegang, Kontakt)
-├── impressum.html      # Platzhalter – vor Livegang ausfüllen
-├── datenschutz.html    # Platzhalter – vor Livegang ausfüllen
+├── impressum.html      # Impressum
+├── datenschutz.html    # Datenschutzerklärung
 ├── 404.html            # Fehlerseite für GitHub Pages
 ├── css/style.css       # Styles inkl. Hell/Dunkel-Theme (Design-Tokens in :root)
 ├── js/main.js          # Theme-Umschalter, Mobile-Navigation, Projektfilter, Scroll-Effekte
-├── assets/img/         # Favicon, später Portrait und Projekt-Screenshots
+├── assets/img/         # Favicon, Portrait, später Projekt-Screenshots
 ├── robots.txt
 ├── CNAME               # Custom Domain für GitHub Pages
 └── .nojekyll           # Jekyll-Verarbeitung von GitHub Pages abschalten
@@ -55,14 +55,6 @@ Außerdem die Domain unter **GitHub → Settings (Account) → Pages → Verifie
 (TXT-Eintrag `_github-pages-challenge-toastgeraet`) und in den Repo-Einstellungen unter
 **Settings → Pages** *Enforce HTTPS* aktivieren. `.dev` ist nur per HTTPS erreichbar – bis GitHub
 das Zertifikat ausgestellt hat, lädt die Seite nicht.
-
-## Offene Punkte / Platzhalter
-
-- [ ] Postfach für `kontakt@tobiasbergmann.dev` einrichten (z. B. mailbox.org; MX-, SPF- und DKIM-Einträge bei INWX) – bis dahin kommen Mails nicht an; danach den Anbieter in `datenschutz.html` ergänzen (TODO-Kommentar)
-- [ ] Verfügbarkeitsstatus in der Visitenkarte pflegen
-- [ ] Weitere Referenzprojekte, Screenshots und Live-Demos ergänzen
-- [ ] Open-Graph-Bild (`og:image`) ergänzen
-- [ ] Optional: englische Version
 
 ## Grundsatz
 
