@@ -4,7 +4,7 @@ Persönliche Website von Tobias Bergmann – Steckbrief, digitale Visitenkarte u
 für Referenzprojekte. Zielgruppe: Freelance-Anfragen und Recruiting.
 
 - **Technik:** reines HTML, CSS und JavaScript – keine Frameworks, kein Build-Schritt
-- **Hosting:** GitHub Pages (später mit Custom Domain)
+- **Hosting:** GitHub Pages unter <https://tobiasbergmann.dev>
 - **Datenschutz:** keine Cookies, kein Tracking, keine externen Ressourcen (System-Schriften statt Google Fonts)
 
 ## Struktur
@@ -19,6 +19,7 @@ für Referenzprojekte. Zielgruppe: Freelance-Anfragen und Recruiting.
 ├── js/main.js          # Theme-Umschalter, Mobile-Navigation, Projektfilter, Scroll-Effekte
 ├── assets/img/         # Favicon, später Portrait und Projekt-Screenshots
 ├── robots.txt
+├── CNAME               # Custom Domain für GitHub Pages
 └── .nojekyll           # Jekyll-Verarbeitung von GitHub Pages abschalten
 ```
 
@@ -37,17 +38,23 @@ Dann <http://localhost:8000> öffnen.
 1. Änderungen auf den Standard-Branch (z. B. `main`) mergen.
 2. Im Repository unter **Settings → Pages** als Quelle *Deploy from a branch* wählen,
    Branch `main`, Ordner `/ (root)`.
-3. Die Seite ist danach unter `https://<user>.github.io/calling-card/` erreichbar.
+3. Die Seite ist danach unter <https://tobiasbergmann.dev> erreichbar
+   (`toastgeraet.github.io/calling-card/` leitet dorthin weiter).
 
-### Custom Domain (später)
+### Custom Domain `tobiasbergmann.dev`
 
-1. Datei `CNAME` im Repo-Root mit der Domain anlegen (z. B. `www.example.de`).
-2. Beim DNS-Anbieter einen `CNAME`-Eintrag auf `<user>.github.io` setzen
-   (bzw. `A`/`AAAA`-Einträge für die Apex-Domain gemäß GitHub-Doku).
-3. In **Settings → Pages** die Domain eintragen und *Enforce HTTPS* aktivieren.
+Die Datei `CNAME` im Repo-Root enthält die Domain. DNS-Einträge bei INWX:
 
-Hinweis: `404.html` verwendet absolute Pfade (`/css/...`) und sieht daher erst mit Custom Domain
-(oder einem User-Pages-Repo) korrekt aus.
+| Name  | Typ   | Wert                                                           |
+|-------|-------|----------------------------------------------------------------|
+| (leer)| A     | `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` |
+| (leer)| AAAA  | `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153` |
+| www   | CNAME | `toastgeraet.github.io`                                        |
+
+Außerdem die Domain unter **GitHub → Settings (Account) → Pages → Verified domains** verifizieren
+(TXT-Eintrag `_github-pages-challenge-toastgeraet`) und in den Repo-Einstellungen unter
+**Settings → Pages** *Enforce HTTPS* aktivieren. `.dev` ist nur per HTTPS erreichbar – bis GitHub
+das Zertifikat ausgestellt hat, lädt die Seite nicht.
 
 ## Offene Punkte / Platzhalter
 
@@ -56,7 +63,7 @@ Hinweis: `404.html` verwendet absolute Pfade (`/css/...`) und sieht daher erst m
 - [ ] XING-Link im Kontaktbereich eintragen
 - [ ] Verfügbarkeitsstatus in der Visitenkarte pflegen
 - [ ] Weitere Referenzprojekte, Screenshots und Live-Demos ergänzen
-- [ ] Open-Graph-Bild (`og:image`) und `canonical`-URL nach Domain-Umzug setzen
+- [ ] Open-Graph-Bild (`og:image`) ergänzen
 - [ ] Optional: englische Version
 
 ## Grundsatz
