@@ -642,6 +642,10 @@ ul { padding-left: 1.2em; }
 
 /* Werdegang */
 .timeline {
+  --date-w: 170px;
+  --gap: 24px;
+  --dot: 12px;
+  --line: 2px;
   list-style: none;
   padding: 0;
   margin: 0 0 64px;
@@ -649,20 +653,20 @@ ul { padding-left: 1.2em; }
 }
 .timeline-item {
   display: grid;
-  grid-template-columns: 170px 1fr;
-  gap: 24px;
+  grid-template-columns: var(--date-w) 1fr;
+  gap: var(--gap);
   padding-bottom: 32px;
   position: relative;
 }
+/* Linie und Punkt sitzen beide mittig in der Lücke zwischen Datum und Inhalt */
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 170px;
+  left: calc(var(--date-w) + var(--gap) / 2 - var(--line) / 2);
   top: 8px;
   bottom: -8px;
-  width: 2px;
+  width: var(--line);
   background: var(--border);
-  transform: translateX(11px);
 }
 .timeline-item:last-child::before { display: none; }
 
@@ -675,15 +679,15 @@ ul { padding-left: 1.2em; }
 }
 .timeline-body {
   position: relative;
-  padding-left: 24px;
+  padding-left: 12px;
 }
 .timeline-body::before {
   content: "";
   position: absolute;
-  left: -7px;
+  left: calc(var(--gap) / -2 - var(--dot) / 2);
   top: 7px;
-  width: 12px;
-  height: 12px;
+  width: var(--dot);
+  height: var(--dot);
   border-radius: 50%;
   background: var(--bg);
   border: 2px solid var(--accent);
