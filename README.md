@@ -59,7 +59,6 @@ das Zertifikat ausgestellt hat, lädt die Seite nicht.
 ## Offene Punkte / Platzhalter
 
 - [ ] Postfach für `kontakt@tobiasbergmann.dev` einrichten (z. B. mailbox.org; MX-, SPF- und DKIM-Einträge bei INWX) – bis dahin kommen Mails nicht an; danach den Anbieter in `datenschutz.html` ergänzen (TODO-Kommentar)
-- [ ] XING-Link im Kontaktbereich eintragen
 - [ ] Verfügbarkeitsstatus in der Visitenkarte pflegen
 - [ ] Weitere Referenzprojekte, Screenshots und Live-Demos ergänzen
 - [ ] Open-Graph-Bild (`og:image`) ergänzen
