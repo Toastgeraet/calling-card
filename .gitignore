@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.vscode/
+.idea/
+# Lokale Unterlagen (z. B. Lebenslauf-PDFs) nicht versionieren
+private/

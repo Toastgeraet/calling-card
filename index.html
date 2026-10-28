@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tobias Bergmann – Fullstack Tech Lead · C# / .NET · Vue · Cloud</title>
+  <meta name="description" content="Tobias Bergmann – Fullstack-Entwickler und Tech Lead mit über zehn Jahren Erfahrung in C#/.NET, Vue, Cloud (AWS/Azure), SSO und CI/CD. Verfügbar für Projekte und Anfragen.">
+  <meta name="author" content="Tobias Bergmann">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tobias Bergmann – Fullstack Tech Lead">
+  <meta property="og:description" content="C# / .NET · Vue · Cloud · Saubere Architektur, Wartbarkeit und IT-Sicherheit.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Theme früh setzen, um Aufblitzen zu vermeiden
+    try {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Zum Seitenanfang">
+        <span class="brand-mark" aria-hidden="true">TB</span>
+        <span class="brand-name">Tobias Bergmann</span>
+      </a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+          <span class="sr-only">Menü öffnen</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#about">Profil</a></li>
+          <li><a href="#skills">Kompetenzen</a></li>
+          <li><a href="#services">Leistungen</a></li>
+          <li><a href="#projects">Projekte</a></li>
+          <li><a href="#experience">Werdegang</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Farbschema wechseln" title="Farbschema wechseln">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero / Visitenkarte -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Fullstack Tech Lead · Freelancer</p>
+          <h1>Tobias Bergmann</h1>
+          <p class="hero-lead">
+            Ich baue wartbare Webanwendungen mit <strong>C#&nbsp;/&nbsp;.NET</strong>, <strong>Vue</strong>
+            und <strong>Cloud</strong> – mit Fokus auf saubere Architektur, IT-Sicherheit
+            und Teams, die KI-gestützt effizient arbeiten.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Projekt anfragen</a>
+            <a class="btn btn-ghost" href="#projects">Referenzen ansehen</a>
+          </div>
+          <ul class="hero-facts" aria-label="Kurzfakten">
+            <li><span class="fact-value">10+</span><span class="fact-label">Jahre Erfahrung</span></li>
+            <li><span class="fact-value">M.Sc.</span><span class="fact-label">Informatik (UHH)</span></li>
+            <li><span class="fact-value">Hamburg</span><span class="fact-label">&amp; remote</span></li>
+          </ul>
+        </div>
+
+        <aside class="card-visit" aria-label="Visitenkarte">
+          <div class="card-visit-top">
+            <div class="avatar" aria-hidden="true">
+              <!-- Platzhalter: später durch Foto ersetzen (assets/img/portrait.jpg) -->
+              <span>TB</span>
+            </div>
+            <div>
+              <p class="card-name">Tobias Bergmann</p>
+              <p class="card-role">Fullstack Tech Lead</p>
+            </div>
+          </div>
+          <dl class="card-meta">
+            <div><dt>Stack</dt><dd>C# · .NET · Vue 3 · SQL Server</dd></div>
+            <div><dt>Cloud</dt><dd>AWS · Azure · Docker · GitLab CI</dd></div>
+            <div><dt>Fokus</dt><dd>Architektur · Security · KI-Workflows</dd></div>
+            <div><dt>Region</dt><dd>Hamburg · remote</dd></div>
+          </dl>
+          <p class="card-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <!-- Platzhalter: Verfügbarkeit anpassen -->
+            Offen für Anfragen
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Profil -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Profil</p>
+          <h2>Über mich</h2>
+        </header>
+        <div class="about-grid">
+          <div class="prose">
+            <p>
+              Fullstack-Entwickler mit über zehn Jahren Erfahrung in der Softwareentwicklung und
+              fundierter Informatik-Ausbildung an der Universität Hamburg. Aktuell verantworte ich als
+              Tech Lead die Neuentwicklung einer Webanwendung mit .NET, Vue&nbsp;3 und AWS, führe ein
+              kleines Entwicklerteam und treibe die Umstellung der Team-Workflows auf KI-gestützte
+              Entwicklung voran.
+            </p>
+            <p>
+              Ich habe viel Erfahrung darin, gewachsene Legacy-Systeme behutsam weiterzuentwickeln,
+              Cloud-Infrastruktur aufzubauen, Single-Sign-On zu integrieren und CI/CD-Pipelines
+              aufzusetzen. Meine Leitmotive dabei: <em>saubere Architektur, Wartbarkeit und IT-Sicherheit</em>.
+            </p>
+          </div>
+          <ul class="values">
+            <li>
+              <h3>Saubere Architektur</h3>
+              <p>Klare Schnittstellen, verständlicher Code, Entscheidungen, die auch in drei Jahren noch tragen.</p>
+            </li>
+            <li>
+              <h3>Sicherheit von Anfang an</h3>
+              <p>Studienschwerpunkt IT-Sicherheit, SSO/SAML-Integrationen und Code-Security-Audits.</p>
+            </li>
+            <li>
+              <h3>KI-gestützte Teams</h3>
+              <p>Eigene Skills und Integrationen, damit KI-Werkzeuge und Team-Prozesse nahtlos ineinandergreifen.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kompetenzen -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Kompetenzen</p>
+          <h2>Womit ich arbeite</h2>
+        </header>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Backend</h3>
+            <ul class="tags">
+              <li>C#</li><li>.NET Web API</li><li>EF Core</li><li>PHP</li><li>Node.js</li><li>Java</li><li>Python</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Frontend</h3>
+            <ul class="tags">
+              <li>Vue 3</li><li>PrimeVue</li><li>Angular</li><li>JavaScript</li><li>HTML / CSS</li><li>Sass</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Daten &amp; APIs</h3>
+            <ul class="tags">
+              <li>SQL Server (T-SQL)</li><li>MySQL</li><li>REST / OpenAPI</li><li>GraphQL</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="tags">
+              <li>AWS</li><li>Azure</li><li>GitLab CI/CD</li><li>Docker</li><li>Linux</li><li>Windows Server</li><li>IIS</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Security</h3>
+            <ul class="tags">
+              <li>SSO / SAML</li><li>Azure AD</li><li>Code-Security-Audits</li><li>IT-Sicherheit (Studium)</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>KI &amp; Prozesse</h3>
+            <ul class="tags">
+              <li>Claude Code</li><li>Claude Design</li><li>Eigene Skills</li><li>Jira-Integrationen</li><li>Deployment-Automatisierung</li>
+            </ul>
+          </article>
+          <article class="skill-card skill-card-wide">
+            <h3>Arbeitsweise</h3>
+            <ul class="tags">
+              <li>Teamführung</li><li>Rollendefinition</li><li>Testautomatisierung</li><li>Clean Code</li><li>Requirements Engineering</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Leistungen</p>
+          <h2>Wobei ich unterstützen kann</h2>
+        </header>
+        <div class="services-grid">
+          <article class="service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            </span>
+            <h3>Fullstack-Entwicklung</h3>
+            <p>Webanwendungen von der API bis zum Frontend – .NET Web API, EF Core, Vue&nbsp;3 und relationale Datenbanken.</p>
+          </article>
+          <article class="service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
+            </span>
+            <h3>Legacy-Modernisierung</h3>
+            <p>Gewachsene Systeme stabilisieren, schrittweise modernisieren und wieder wartbar machen – ohne Big Bang.</p>
+          </article>
+          <article class="service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-7.97A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z"/></svg>
+            </span>
+            <h3>Cloud, CI/CD &amp; SSO</h3>
+            <p>AWS- und Azure-Infrastruktur, automatisierte Pipelines und Single-Sign-On-Integrationen (SAML, Azure AD).</p>
+          </article>
+          <article class="service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.5 1.5-4.5 3-4.5s4 1.5 4 4.5"/></svg>
+            </span>
+            <h3>Tech Lead &amp; KI-Workflows</h3>
+            <p>Technische Leitung, Rollen im Team schärfen und Entwicklungsprozesse sinnvoll mit KI-Werkzeugen verzahnen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projekte / Showcase -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Showcase</p>
+          <h2>Ausgewählte Projekte</h2>
+          <p class="section-intro">
+            Ein Auszug aus meiner Arbeit. Kundenprojekte sind anonymisiert – Details gerne im persönlichen Gespräch.
+          </p>
+        </header>
+
+        <div class="filter" role="group" aria-label="Projekte filtern">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">Alle</button>
+          <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+          <button type="button" class="filter-btn" data-filter="cloud" aria-pressed="false">Cloud &amp; DevOps</button>
+          <button type="button" class="filter-btn" data-filter="ai" aria-pressed="false">KI</button>
+          <button type="button" class="filter-btn" data-filter="research" aria-pressed="false">Forschung</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project" data-tags="web cloud">
+            <div class="project-head">
+              <p class="project-kicker">Greenfield · Tech Lead</p>
+              <h3>Neuentwicklung einer Webanwendung</h3>
+            </div>
+            <p>
+              Technische Leitung einer neuen Webanwendung inklusive Architektur, Teamaufstellung
+              und Entwicklungsprozess. Führung von drei Entwicklern.
+            </p>
+            <ul class="tags tags-sm"><li>.NET Web API</li><li>EF Core</li><li>SQL Server</li><li>Vue 3</li><li>PrimeVue</li><li>AWS</li></ul>
+          </article>
+
+          <article class="project" data-tags="cloud">
+            <div class="project-head">
+              <p class="project-kicker">Tooling · QA</p>
+              <h3>Deployment- &amp; Installationstool</h3>
+            </div>
+            <p>
+              Automatisiertes Bereitstellen von Testumgebungen für die QA: Seeding sowie automatisches
+              Verbinden von Backends, Frontends und Datenbanken – mit großem Anklang im Team.
+            </p>
+            <ul class="tags tags-sm"><li>Automatisierung</li><li>.NET</li><li>AWS</li><li>QA</li></ul>
+          </article>
+
+          <article class="project" data-tags="ai">
+            <div class="project-head">
+              <p class="project-kicker">Prozesse · KI</p>
+              <h3>KI-Transformation im Entwicklerteam</h3>
+            </div>
+            <p>
+              Eigene Skills und Jira-Integrationen, damit KI-Werkzeuge und Team-Workflows nahtlos
+              ineinandergreifen; Integration von Claude Design in den Frontend-Prozess.
+            </p>
+            <ul class="tags tags-sm"><li>Claude Code</li><li>Claude Design</li><li>Jira</li><li>Workflow-Design</li></ul>
+          </article>
+
+          <article class="project" data-tags="web cloud">
+            <div class="project-head">
+              <p class="project-kicker">Legacy · Security</p>
+              <h3>Weiterentwicklung &amp; SSO für eine Legacy-Webanwendung</h3>
+            </div>
+            <p>
+              Hauptverantwortlicher Entwickler einer gewachsenen Webanwendung: REST-APIs nach OpenAPI,
+              Web-Frontends, SSO via Azure AD, AWS und IIS (SAML) sowie CI/CD mit GitLab.
+            </p>
+            <ul class="tags tags-sm"><li>C# / .NET</li><li>PHP</li><li>Vue.js</li><li>Angular</li><li>SAML</li><li>GitLab CI</li></ul>
+          </article>
+
+          <article class="project" data-tags="research">
+            <div class="project-head">
+              <p class="project-kicker">Forschung · Computer Vision</p>
+              <h3>Erfassung von Blickbewegungen</h3>
+            </div>
+            <p>
+              Erfassung und Auswertung von Blickbewegungen mit OpenCV sowie Parallelisierung
+              rechenintensiver Algorithmen in Python.
+            </p>
+            <ul class="tags tags-sm"><li>Python</li><li>OpenCV</li><li>Parallelisierung</li></ul>
+          </article>
+
+          <!-- Platzhalter für weitere Referenz-/Side-Projekte -->
+          <article class="project project-placeholder" data-tags="web">
+            <div class="project-head">
+              <p class="project-kicker">Demnächst</p>
+              <h3>Weitere Referenzen &amp; Side-Projects</h3>
+            </div>
+            <p>
+              Hier folgen weitere Projekte, Open-Source-Beiträge und Live-Demos.
+            </p>
+            <!-- Beispiel für Links:
+            <p class="project-links">
+              <a href="https://github.com/…">Code</a>
+              <a href="https://…">Live-Demo</a>
+            </p>
+            -->
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Werdegang -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Werdegang</p>
+          <h2>Berufserfahrung</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-date">06/2021 – heute</div>
+            <div class="timeline-body">
+              <h3>Intercept Solutions GmbH</h3>
+              <p class="timeline-role">Fullstack Tech Lead <span>· seit 01/2026</span></p>
+              <ul>
+                <li>Technische Leitung einer Greenfield-Webanwendung, Führung von drei Entwicklern</li>
+                <li>Rollen im Team neu definiert und ausgerichtet</li>
+                <li>Maßgebliche Gestaltung der KI-Transformation der Team-Workflows</li>
+                <li>Automatisiertes Deployment- und Installationstool für die QA</li>
+              </ul>
+              <p class="timeline-role">Fullstack-Entwickler <span>· 06/2021 – 12/2025</span></p>
+              <ul>
+                <li>Hauptverantwortlicher Entwickler einer gewachsenen Legacy-Webanwendung</li>
+                <li>REST-APIs (OpenAPI), Web-Frontends, SSO-Integrationen (Azure AD, AWS, IIS / SAML)</li>
+                <li>DevOps und CI/CD mit GitLab; Administration von Windows Server, Azure und AWS</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">01/2021 – 05/2021</div>
+            <div class="timeline-body">
+              <h3>Portrix GmbH</h3>
+              <p class="timeline-role">Softwareentwickler</p>
+              <ul><li>Weiterentwicklung einer Preisberechnungssoftware für die Logistikbranche (Java EE, Vaadin, PHP)</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">04/2020 – 12/2020</div>
+            <div class="timeline-body">
+              <h3>.Fount GmbH</h3>
+              <p class="timeline-role">IT &amp; Prozessautomatisierung</p>
+              <ul><li>Verantwortung für die gesamte IT, Automatisierung von Geschäftsprozessen, API-Design (Node.js, IBM Cloud)</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">01/2020 – 04/2020</div>
+            <div class="timeline-body">
+              <h3>Vierbeuter UG</h3>
+              <p class="timeline-role">Fullstack-Entwickler</p>
+              <ul><li>Plugin-Entwicklung für Craft CMS, GraphQL-API, Frontend mit Vue.js und Sass</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">03/2019 – 12/2019</div>
+            <div class="timeline-body">
+              <h3>SYSback AG</h3>
+              <p class="timeline-role">PHP-Backend-Entwickler</p>
+              <ul><li>Architektur- und Performance-Verbesserungen, CI/CD mit GitLab CI und Docker, PHPUnit, Code-Security-Audits</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">08/2017 – 03/2019</div>
+            <div class="timeline-body">
+              <h3>WhiteGrid GmbH</h3>
+              <p class="timeline-role">PHP-Backend-Entwickler &amp; Requirements Engineer</p>
+              <ul><li>Backend-Entwicklung, Betreuung der Cloud-Infrastruktur (AWS, Docker, Linux), MySQL-Administration</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">05/2014 – 08/2017</div>
+            <div class="timeline-body">
+              <h3>Forschungsgruppe g/d/p</h3>
+              <p class="timeline-role">Software- &amp; Webentwickler</p>
+              <ul><li>Computer Vision mit OpenCV, Parallelisierung in Python, Web- und Softwareentwicklung</li></ul>
+            </div>
+          </li>
+        </ol>
+
+        <div class="edu-grid">
+          <div>
+            <h2 class="h3">Ausbildung</h2>
+            <ul class="edu-list">
+              <li><strong>M.Sc. Informatik</strong> · Universität Hamburg<br><span>Schwerpunkte: IT-Sicherheit, Algorithmen, Softwarearchitektur, Machine Learning</span></li>
+              <li><strong>B.Sc. Informatik</strong> · Universität Hamburg<br><span>Bachelorarbeit im Bereich IT-Sicherheit</span></li>
+              <li><strong>Fachinformatiker für Systemintegration</strong> · Siemens AG, Hamburg</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="h3">Sprachen</h2>
+            <ul class="edu-list">
+              <li><strong>Deutsch</strong> · Muttersprache</li>
+              <li><strong>Englisch</strong> · C1, verhandlungssicher</li>
+              <li><strong>Französisch</strong> · Grundkenntnisse</li>
+            </ul>
+            <h2 class="h3">Abseits der Tastatur</h2>
+            <p class="muted">Bouldern, Laufen, Lesen und Brettspiele – am liebsten soziale Deduktionsspiele wie <em>Blood on the Clocktower</em>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact">
+        <header class="section-header">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Lass uns sprechen</h2>
+          <p class="section-intro">
+            Ob Freelance-Projekt, Festanstellung oder fachlicher Austausch – ich freue mich über deine Nachricht.
+          </p>
+        </header>
+        <!--
+          Platzhalter: Bewusst keine E-Mail-Adresse oder Telefonnummer im Klartext.
+          Optionen für später: Kontaktformular-Dienst, Profil-Links (LinkedIn, XING, GitHub),
+          oder eine eigene Adresse unter der Custom Domain.
+        -->
+        <ul class="contact-links">
+          <li><a class="btn btn-primary" href="#" data-placeholder="true">LinkedIn <span class="sr-only">(folgt)</span></a></li>
+          <li><a class="btn btn-ghost" href="#" data-placeholder="true">XING <span class="sr-only">(folgt)</span></a></li>
+          <li><a class="btn btn-ghost" href="#" data-placeholder="true">GitHub <span class="sr-only">(folgt)</span></a></li>
+        </ul>
+        <p class="muted small">Kontaktmöglichkeiten werden in Kürze ergänzt.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Tobias Bergmann</p>
+      <ul class="footer-links">
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
