@@ -364,13 +364,28 @@ ul { padding-left: 1.2em; }
    Hero
    ========================================================================== */
 .hero {
-  padding: clamp(48px, 9vw, 112px) 0 clamp(56px, 8vw, 96px);
+  --skyline-w: min(560px, 82vw);
+  position: relative;
+  overflow: hidden;
+  /* unten Platz für die Elphi-Silhouette (Seitenverhältnis 640:260) */
+  padding: clamp(48px, 9vw, 112px) 0 calc(var(--skyline-w) * 0.40625 + 24px);
   background:
     radial-gradient(900px 400px at 85% 0%, var(--accent-soft), transparent 70%),
     var(--bg);
 }
-
+.hero-skyline {
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%);
+  width: var(--skyline-w);
+  height: auto;
+  color: var(--accent);
+  opacity: 0.16;
+  pointer-events: none;
+}
 .hero-inner {
+  position: relative;
   display: grid;
   grid-template-columns: 1.35fr 1fr;
   gap: clamp(32px, 5vw, 64px);
@@ -490,6 +505,42 @@ ul { padding-left: 1.2em; }
   .hero-inner { grid-template-columns: 1fr; }
   .card-visit { max-width: 480px; }
 }
+
+/* ==========================================================================
+   Leitsatz
+   ========================================================================== */
+.slogan {
+  background: var(--bg-alt);
+  padding: clamp(56px, 8vw, 88px) 0;
+  overflow: hidden;
+}
+.slogan-inner {
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.slogan-bg {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(9rem, 26vw, 18rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--text);
+  opacity: 0.06;
+  user-select: none;
+}
+.slogan-text {
+  position: relative;
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.slogan-text span { color: var(--text-muted); font-weight: 500; }
 
 /* ==========================================================================
    Sections
