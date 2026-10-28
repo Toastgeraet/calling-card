@@ -52,9 +52,8 @@ Hinweis: `404.html` verwendet absolute Pfade (`/css/...`) und sieht daher erst m
 ## Offene Punkte / Platzhalter
 
 - [ ] Impressum und Datenschutzerklärung vervollständigen (Anschrift, Kontakt)
-- [ ] Kontaktweg festlegen (Profil-Links, Kontaktformular-Dienst oder Adresse unter eigener Domain)
-- [ ] Links zu LinkedIn / XING / GitHub im Kontaktbereich eintragen
-- [ ] Portrait-Foto ergänzen (`assets/img/portrait.jpg`, im Avatar der Visitenkarte einbinden)
+- [ ] Platzhalter-Adresse `kontakt@example.com` ersetzen (Kontakt-Button in `index.html`, Impressum, Datenschutz)
+- [ ] XING-Link im Kontaktbereich eintragen
 - [ ] Verfügbarkeitsstatus in der Visitenkarte pflegen
 - [ ] Weitere Referenzprojekte, Screenshots und Live-Demos ergänzen
 - [ ] Open-Graph-Bild (`og:image`) und `canonical`-URL nach Domain-Umzug setzen
