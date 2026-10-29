@@ -16,9 +16,11 @@ für Referenzprojekte. Zielgruppe: Freelance-Anfragen und Recruiting.
 ├── datenschutz.html    # Datenschutzerklärung
 ├── 404.html            # Fehlerseite für GitHub Pages
 ├── css/style.css       # Styles inkl. Hell/Dunkel-Theme (Design-Tokens in :root)
-├── js/main.js          # Theme-Umschalter, Mobile-Navigation, Projektfilter, Scroll-Effekte
-├── assets/img/         # Favicon, Portrait, später Projekt-Screenshots
+├── js/main.js          # Theme-Umschalter, Mobile-Navigation, Zeitfresser-Rechner, Scroll-Effekte
+├── assets/img/         # Favicon, Portrait, Vorschaubild (og-image.png)
+├── tools/og-image.html # Vorlage für das Vorschaubild
 ├── robots.txt
+├── sitemap.xml
 ├── CNAME               # Custom Domain für GitHub Pages
 └── .nojekyll           # Jekyll-Verarbeitung von GitHub Pages abschalten
 ```
@@ -55,6 +57,21 @@ Außerdem die Domain unter **GitHub → Settings (Account) → Pages → Verifie
 (TXT-Eintrag `_github-pages-challenge-toastgeraet`) und in den Repo-Einstellungen unter
 **Settings → Pages** *Enforce HTTPS* aktivieren. `.dev` ist nur per HTTPS erreichbar – bis GitHub
 das Zertifikat ausgestellt hat, lädt die Seite nicht.
+
+### Vorschaubild für Link-Vorschauen
+
+`assets/img/og-image.png` (1200 × 630 px) erscheint, wenn der Link auf XING, LinkedIn oder in
+Messengern geteilt wird. Nach Textänderungen `tools/og-image.html` anpassen und neu rendern, z. B.:
+
+```bash
+npx playwright screenshot --viewport-size=1200,630 tools/og-image.html assets/img/og-image.png
+```
+
+### Suchmaschinen
+
+`sitemap.xml` listet nur die Startseite (Impressum und Datenschutz sind `noindex`). Bei größeren
+Änderungen `lastmod` aktualisieren. Die Seite ist in der Google Search Console als Domain-Property
+angemeldet (TXT-Eintrag bei INWX).
 
 ### Cache
 
