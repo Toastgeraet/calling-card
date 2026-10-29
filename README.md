@@ -70,8 +70,8 @@ npx playwright screenshot --viewport-size=1200,630 tools/og-image.html assets/im
 ### Suchmaschinen
 
 `sitemap.xml` listet nur die Startseite (Impressum und Datenschutz sind `noindex`). Bei größeren
-Änderungen `lastmod` aktualisieren. Die Seite ist in der Google Search Console als Domain-Property
-angemeldet (TXT-Eintrag bei INWX).
+Änderungen `lastmod` aktualisieren. Anmeldung in der Google Search Console als Domain-Property
+(Bestätigung per TXT-Eintrag bei INWX), dort die Sitemap einreichen.
 
 ### Cache
 
