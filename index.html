@@ -107,7 +107,7 @@
   </script>
   <meta name="theme-color" content="#0f172a">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css?v=20261028-2">
+  <link rel="stylesheet" href="css/style.css?v=20261101-3">
   <script>
     // Theme früh setzen, um Aufblitzen zu vermeiden
     try {
@@ -115,7 +115,7 @@
       if (t) document.documentElement.setAttribute('data-theme', t);
     } catch (e) {}
   </script>
-  <script src="js/main.js?v=20261028-2" defer></script>
+  <script src="js/main.js?v=20261101-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -136,6 +136,7 @@
           <li><a href="#calculator">Rechner</a></li>
           <li><a href="#process">Ablauf</a></li>
           <li><a href="#projects">Projekte</a></li>
+          <li><a href="#showcase">Showcase</a></li>
           <li><a href="#about">Über mich</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
@@ -455,8 +456,104 @@
       </div>
     </section>
 
+    <!-- KI-Showcase -->
+    <section class="section" id="showcase">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Showcase</p>
+          <h2>Was ich nebenbei mit KI baue</h2>
+          <p class="section-intro">
+            Eigene Projekte, die ich zusammen mit KI-Werkzeugen wie Claude Code entwickle – vom Lernspiel
+            für Kinder bis zum Werkzeug, das mir selbst Arbeit abnimmt.
+          </p>
+        </header>
+        <div class="showcase-grid">
+          <article class="showcase-card" data-tone="teal">
+            <div class="showcase-cover" aria-hidden="true">
+              <!-- Platzhalter: später durch Screenshot ersetzen -->
+              <svg viewBox="0 0 64 64"><rect x="8" y="12" width="48" height="40" rx="6"/><path d="M18 26l8 6-8 6M30 40h14"/></svg>
+            </div>
+            <div class="showcase-body">
+              <p class="project-kicker">Claude-Code-Plugin</p>
+              <h3>tbd</h3>
+              <p>Mein persönliches Plugin mit „lebenden“ Skills: <code>/tbd:scaffold</code> richtet neue Projekte – Godot-Spiel, Android-App, Web – auf einem erprobten Stack ein. <code>/tbd:contribute</code> sammelt, was eine Session gelehrt hat, und schlägt es als Pull Request vor.</p>
+              <ul class="tags tags-sm"><li>Claude Code</li><li>Skills</li><li>Plugin-Marketplace</li></ul>
+              <div class="showcase-foot">
+                <span class="showcase-status">Open Source</span>
+                <a class="showcase-link" href="https://github.com/Toastgeraet/tbd" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>Code auf GitHub<span class="sr-only"> (öffnet in neuem Tab)</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="showcase-card" data-tone="indigo">
+            <div class="showcase-cover" aria-hidden="true">
+              <!-- Platzhalter: später durch Screenshot ersetzen -->
+              <svg viewBox="0 0 64 64"><path d="M10 30L32 12l22 18"/><path d="M16 26v24h14"/><circle cx="42" cy="42" r="8"/><path d="M48 48l6 6"/></svg>
+            </div>
+            <div class="showcase-body">
+              <p class="project-kicker">Alltagswerkzeug · Desktop-Web-App</p>
+              <h3>Immo-Spider</h3>
+              <p>Hilft, bei der Wohnungssuche den Überblick zu behalten: Angebote an einem Ort sammeln und vergleichen. Läuft lokal auf dem eigenen Rechner.</p>
+              <ul class="tags tags-sm"><li>Web-App</li><li>Lokal</li><li>Automatisierung</li></ul>
+              <div class="showcase-foot">
+                <span class="showcase-status">Privat</span>
+                
+              </div>
+            </div>
+          </article>
+          <article class="showcase-card" data-tone="amber">
+            <div class="showcase-cover" aria-hidden="true">
+              <!-- Platzhalter: später durch Screenshot ersetzen -->
+              <svg viewBox="0 0 64 64"><path d="M32 18c-6-4-14-5-22-4v34c8-1 16 0 22 4 6-4 14-5 22-4V14c-8-1-16 0-22 4z"/><path d="M32 18v34"/></svg>
+            </div>
+            <div class="showcase-body">
+              <p class="project-kicker">App · Android</p>
+              <h3>Reading Tracker</h3>
+              <p>Leseziele setzen und sehen, wie viele Seiten heute dran sind: Bücher, To-read-Liste, Fortschritt und Backup – auf Deutsch und Englisch, mit Dunkelmodus.</p>
+              <ul class="tags tags-sm"><li>Android</li><li>Offline</li><li>Zweisprachig</li></ul>
+              <div class="showcase-foot">
+                <span class="showcase-status">Code privat</span>
+                <a class="showcase-link" href="https://toastgeraet.github.io/reading-tracker-roadmap/" target="_blank" rel="noopener noreferrer">Öffentliche Roadmap<span class="sr-only"> (öffnet in neuem Tab)</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="showcase-card" data-tone="rose">
+            <div class="showcase-cover" aria-hidden="true">
+              <!-- Platzhalter: später durch Screenshot ersetzen -->
+              <svg viewBox="0 0 64 64"><rect x="20" y="8" width="24" height="48" rx="5"/><circle cx="27" cy="42" r="3.5"/><circle cx="37" cy="44" r="3.5"/><circle cx="32" cy="34" r="3.5"/><path d="M11 22q-4 10 0 20M53 22q4 10 0 20"/></svg>
+            </div>
+            <div class="showcase-body">
+              <p class="project-kicker">Lernspiel · Godot + Android</p>
+              <h3>Rechen-Trainer</h3>
+              <p>Rechenspiele für Kinder. Beim „Schüttel-Box“-Spiel schüttelt das Kind das Handy, Kugeln hüpfen ins offene Fach – und es rechnet aus, wie viele noch unter dem Deckel liegen.</p>
+              <ul class="tags tags-sm"><li>Godot 4</li><li>Android</li><li>Bewegungssensor</li><li>Tests</li></ul>
+              <div class="showcase-foot">
+                <span class="showcase-status">Open Source</span>
+                <a class="showcase-link" href="https://github.com/Toastgeraet/rechen-trainer" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>Code auf GitHub<span class="sr-only"> (öffnet in neuem Tab)</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="showcase-card" data-tone="sky">
+            <div class="showcase-cover" aria-hidden="true">
+              <!-- Platzhalter: später durch Screenshot ersetzen -->
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="13"/><ellipse cx="32" cy="32" rx="26" ry="8" transform="rotate(-20 32 32)"/><circle cx="52" cy="14" r="2"/><circle cx="12" cy="52" r="1.5"/></svg>
+            </div>
+            <div class="showcase-body">
+              <p class="project-kicker">Spiel · Godot 4</p>
+              <h3>Cosmic Capitalist</h3>
+              <p>Ein Roguelike-Handelsspiel im Weltall: günstig kaufen, teuer verkaufen, jede Runde anders. Die Pixel-Planeten entstehen prozedural.</p>
+              <ul class="tags tags-sm"><li>Godot 4</li><li>GDScript</li><li>Prozedurale Grafik</li></ul>
+              <div class="showcase-foot">
+                <span class="showcase-status">In Entwicklung</span>
+                <a class="showcase-link" href="https://github.com/Toastgeraet/cosmic-capitalist" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>Code auf GitHub<span class="sr-only"> (öffnet in neuem Tab)</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Über mich -->
-    <section class="section" id="about">
+    <section class="section section-alt" id="about">
       <div class="container">
         <header class="section-header">
           <p class="eyebrow">Über mich</p>
@@ -504,7 +601,7 @@
     </section>
 
     <!-- Werkzeugkasten -->
-    <section class="section section-alt" id="skills">
+    <section class="section" id="skills">
       <div class="container">
         <header class="section-header">
           <p class="eyebrow">Werkzeugkasten</p>
@@ -553,7 +650,7 @@
     </section>
 
     <!-- Werdegang -->
-    <section class="section" id="experience">
+    <section class="section section-alt" id="experience">
       <div class="container">
         <header class="section-header">
           <p class="eyebrow">Werdegang</p>
@@ -654,7 +751,7 @@
     </section>
 
     <!-- Kontakt -->
-    <section class="section section-alt" id="contact">
+    <section class="section" id="contact">
       <div class="container contact">
         <header class="section-header">
           <p class="eyebrow">Kontakt</p>

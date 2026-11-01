@@ -85,7 +85,7 @@
       });
     }, { rootMargin: '0px 0px -10% 0px' });
 
-    document.querySelectorAll('.section-header, .skill-card, .service, .project, .step, .calc, .timeline-item, .values li')
+    document.querySelectorAll('.section-header, .skill-card, .service, .project, .showcase-card, .step, .calc, .timeline-item, .values li')
       .forEach(function (el) {
         el.classList.add('reveal');
         revealObserver.observe(el);

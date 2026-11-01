@@ -11,7 +11,7 @@ für Referenzprojekte. Zielgruppe: Freelance-Anfragen und Recruiting.
 
 ```
 .
-├── index.html          # Startseite (Hero/Visitenkarte, Profil, Kompetenzen, Leistungen, Projekte, Werdegang, Kontakt)
+├── index.html          # Startseite (Hero, Angebot, Rechner, Ablauf, Projekte, KI-Showcase, Über mich, Werdegang, Kontakt)
 ├── impressum.html      # Impressum
 ├── datenschutz.html    # Datenschutzerklärung
 ├── 404.html            # Fehlerseite für GitHub Pages
