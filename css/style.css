@@ -472,7 +472,7 @@ ul { padding-left: 1.2em; }
 }
 .card-meta div {
   display: grid;
-  grid-template-columns: 64px 1fr;
+  grid-template-columns: 68px 1fr;
   gap: 12px;
   padding-top: 10px;
   border-top: 1px dashed var(--border);
@@ -486,6 +486,15 @@ ul { padding-left: 1.2em; }
   padding-top: 3px;
 }
 .card-meta dd { margin: 0; font-size: 0.95rem; }
+
+.card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.btn-sm { padding: 0.55em 1.15em; font-size: 0.9rem; }
 
 .card-status {
   display: inline-flex;
